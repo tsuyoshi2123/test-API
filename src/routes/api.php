@@ -26,5 +26,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // GET + Class
 Route::get('/member', [MemberController::class, 'index']);
-Route::get('/member/create', [MemberController::class, 'create']);
-Route::post('/member/show', [MemberController::class, 'show']);
+Route::post('/member/create', [MemberController::class, 'create']);
