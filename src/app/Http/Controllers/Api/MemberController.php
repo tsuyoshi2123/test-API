@@ -2,26 +2,24 @@
 
 namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
-use APP\Models\Member;
+use App\Models\Member;
 
 class MemberController extends Controller
 {
     /**
      * index
      *
-     * @return void
+     * @return $member
      */
     function index() {
-        //
+        $member = Member::get();
+        return $member;
     }
 
     /**
      * create
-     *
-     * @return void
      */
     function create() {
-        
+        //
     }
 }
