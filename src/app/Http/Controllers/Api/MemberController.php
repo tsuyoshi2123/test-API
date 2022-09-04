@@ -20,7 +20,7 @@ class MemberController extends Controller
 
     /**
      * create
-     * 
+     *
      * @return mixed
      */
     function create(Request $request) {
@@ -42,6 +42,7 @@ class MemberController extends Controller
 
     /**
      * fetch
+     *
      * @return mixed
      */
     function fetch() {
