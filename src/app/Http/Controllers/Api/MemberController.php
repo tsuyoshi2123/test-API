@@ -15,7 +15,7 @@ class MemberController extends Controller
      */
     function index() {
         $member = Member::get();
-        return $member;
+        return response()->json($member);
     }
 
     /**
@@ -37,6 +37,17 @@ class MemberController extends Controller
             'tell'       => $request->tell,
         ]);
 
+        return response()->json($member);
+    }
+
+    /**
+     * fetch
+     * @return mixed
+     */
+    function fetch() {
+        $parses = parse_url($_SERVER["REQUEST_URI"]);
+        $index = explode("/",$parses["path"])[3];
+        $member = Member::find($index);
         return response()->json($member);
     }
 }
