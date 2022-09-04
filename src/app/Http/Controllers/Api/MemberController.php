@@ -50,4 +50,16 @@ class MemberController extends Controller
         $member = Member::find($index);
         return response()->json($member);
     }
+
+    /**
+     * update
+     *
+     * @return bool
+     */
+    function update(Request $request) {
+        $parses = parse_url($_SERVER["REQUEST_URI"]);
+        $index = explode("/", $parses["path"])[3];
+        $bool = Member::find($index)->fill($request->all())->save();
+        return $bool;
+    }
 }
