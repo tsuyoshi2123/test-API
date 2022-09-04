@@ -29,3 +29,4 @@ Route::get('/member', [MemberController::class, 'index']);
 Route::post('/member/create', [MemberController::class, 'create']);
 Route::get('/member/{id}/show', [MemberController::class, 'fetch']);
 Route::post('/member/{id}/update', [MemberController::class, 'update']);
+Route::get('/member/{id}/delete', [MemberController::class, 'delete']);
